@@ -6,14 +6,10 @@ public class Main {
     public static void main(String[] args) {
         List<Flight> flightList = FlightBuilder.createFlights();
 
-        FilterFlight.filter1(flightList);
-        System.out.println("\n" +
-                "\nfilter2\n");
-        FilterFlight.filter2(flightList);
-
-        System.out.println("\n" +
-                "\nfilter3\n");
-
-        FilterFlight.filter3(flightList);
+        for (int i = 1; i < 4; i++) {
+            System.out.println("Тест фильтра номер " + i + ":\n");
+            FilterFlight.printFilterList(i, flightList);
+            System.out.println("\nТест фильтра номер " + i + " окончен\n-\n");
+        }
     }
 }
